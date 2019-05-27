@@ -1,0 +1,4 @@
+.boardDiv {
+    display: flex;
+    flex-direction: row;
+  }

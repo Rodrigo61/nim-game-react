@@ -1,5 +1,7 @@
-img {
-    background-color: red;
+Img {
     border-radius: 125px;
-    
+}
+
+.selectedImg {
+    border-radius: 10px;
 }

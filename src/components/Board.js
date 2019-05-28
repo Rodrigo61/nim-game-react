@@ -5,9 +5,12 @@ import "./Board.css";
 class Board extends React.Component {
   constructor(props) {
     super(props);
-    const selectedPrefixList = this.props.stacks.map(() => {
-      return -1;
-    });
+
+    const selectedPrefixList = [];
+    for (let i = 0; i < this.props.stacks.length; i++) {
+      selectedPrefixList.push(-1);
+    }
+    selectedPrefixList[0] = 0; // Start with the first stone from first stack selected
 
     this.state = {
       selectedPrefixList: selectedPrefixList
@@ -16,7 +19,6 @@ class Board extends React.Component {
 
   render() {
     const StoneStacksComponentList = this.getStoneStacksComponentList();
-
     return <div className="boardDiv">{StoneStacksComponentList}</div>;
   }
 
